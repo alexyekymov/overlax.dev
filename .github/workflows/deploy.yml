@@ -14,8 +14,8 @@ jobs:
 
         - name: setup key
           run: mkdir "$HOME/.ssh"
-          run: echo "${{ secrets.ssh_key }}" > "$HOME/.ssh/key"
-          run: chmod 600 "$HOME/.ssh/key"
+               echo "${{ secrets.ssh_key }}" > "$HOME/.ssh/key"
+               chmod 600 "$HOME/.ssh/key"
 
         - name: deploy
           run: cd site && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" \
