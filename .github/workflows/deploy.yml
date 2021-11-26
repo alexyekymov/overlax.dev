@@ -18,6 +18,6 @@ jobs:
           run: chmod 600 "$HOME/.ssh/key"
 
         - name: deploy
-          run: rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" \
+          run: cd site && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" \
            --archive --compress --delete . \
            ubuntu@ubuntu.dev:/var/www/overlax.dev/html/
