@@ -14,7 +14,7 @@ jobs:
 
         - name: setup key
           run: mkdir "$HOME/.ssh"
-               echo "${{ secrets.ssh_key }}" > "$HOME/.ssh/key"
+               echo "${{ secrets.SSH_KEY }}" > "$HOME/.ssh/key"
                chmod 600 "$HOME/.ssh/key"
 
         - name: deploy
