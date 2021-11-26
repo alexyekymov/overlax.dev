@@ -9,15 +9,14 @@ jobs:
   deploy:
       runs-on: ubuntu-latest
       steps:
-        - name: check out code
-          uses: actions/checkout@v2
 
-        - name: setup key
-          run: mkdir $HOME/.ssh
-               echo ${{ secrets.SSH_KEY }} > $HOME/.ssh/key
-               chmod 600 "$HOME/.ssh/key"
+        - uses: actions/checkout@v2
 
-        - name: deploy
-          run: cd site && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" \
-           --archive --compress --delete . \
-           ubuntu@ubuntu.dev:/var/www/overlax.dev/html/
+        - run: mkdir "$HOME/.ssh"
+        - run:     echo "${{ secrets.ssh_key }}" > "$HOME/.ssh/key"
+        - run:     chmod 600 "$HOME/.ssh/key"
+
+        
+        - run: cd site && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" \
+                  --archive --compress --delete . \
+                  ubuntu@ubuntu.dev:/var/www/overlax.dev/html/
