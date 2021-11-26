@@ -13,8 +13,8 @@ jobs:
           uses: actions/checkout@v2
 
         - name: setup key
-          run: mkdir "$HOME/.ssh"
-               echo "${{ secrets.SSH_KEY }}" > "$HOME/.ssh/key"
+          run: mkdir $HOME/.ssh
+               echo ${{ secrets.SSH_KEY }} > $HOME/.ssh/key
                chmod 600 "$HOME/.ssh/key"
 
         - name: deploy
