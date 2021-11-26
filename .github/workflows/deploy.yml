@@ -17,5 +17,4 @@ jobs:
         - run:     chmod 600 "$HOME/.ssh/key"
 
         
-        - run: cd site && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" \
-                  --archive --compress --delete . ${{ secrets.dest }}
+        - run: cd site && rsync -e "ssh -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . ${{ secrets.dest }}
