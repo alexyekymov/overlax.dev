@@ -1,51 +1,52 @@
-html, body {
-    background-color: #f1f1f1;
-    height: 100%;
-    padding: 0;
-    margin: 0;
+html,
+body {
+  background-color: #f1f1f1;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 header {
-    background-color: royalblue;
-    text-align: center;
-    font-size: 24px;
-    height: 65px;
+  background-color: royalblue;
+  text-align: center;
+  font-size: 24px;
+  height: 65px;
 }
 
 header h1 {
-    margin: 0;
+  margin: 0;
 }
 
 #content {
-    width: 500px;
-    max-height: 1000px;
-    margin: auto;
+  width: 500px;
+  max-height: 1000px;
+  margin: auto;
 }
 
 .element {
-    padding: 12px;
+  padding: 12px;
 }
 
 .button {
-    padding: 15px 80px;
-    font-size: 24px;
-    width: 100%;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 30px;
-    box-shadow: 7px 9px #999;
+  padding: 15px 80px;
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 7px 9px #999;
 }
 
 .button:hover {
-background-color: #3e8e41;
+  background-color: #3e8e41;
 }
 
 .button:active {
-    background-color: #3e8e41;
-    box-shadow: 4px 5px #666;
-    transform: translate(3px, 4px);
+  background-color: #3e8e41;
+  box-shadow: 4px 5px #666;
+  transform: translate(3px, 4px);
 }
